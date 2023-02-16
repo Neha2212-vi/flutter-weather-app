@@ -6,4 +6,17 @@
   padding: 15px 30px;
   background-image: linear-gradient(to right, rgb(12, 106, 137), rgb(100, 196, 228));
 }
-
+.favourite-city-heading{
+  border: 1px solid white;
+  color: white;
+}
+.favourite-city_data{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.error{
+  color: rgba(255, 255, 255, 0.874);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
