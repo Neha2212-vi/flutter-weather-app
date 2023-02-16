@@ -16,7 +16,7 @@ function App() {
   const [unitBtn, setUnitBtn] = useState(false);
   const [favourite, setFavourite] = useState(false);
   const [itemsData, setItems] = useState();
-  // const [Error, setError] = useState();
+
   useEffect(() => {
     const fetchData = async () => {
       const data = await axios.get(`${api_data.base}/weather?q=${serachInput}&appid=${api_data.key}&units=${unit}`)
@@ -24,13 +24,15 @@ function App() {
       setFlag(false)
     }
     fetchData()
-  }, [flag === true, unit])
+  }, [flag === true, unit]);
+
   useEffect(() => {
     let favouriteCities = JSON.parse(localStorage.getItem('searchData') || "[]")
     favouriteCities.push(searchData)
     localStorage.setItem('searchData', JSON.stringify(favouriteCities));
 
   }, [favourite === true]);
+
   useEffect(() => {
     if (favourite === true) {
       setFavourite(false)
@@ -39,8 +41,11 @@ function App() {
         setItems(item);
       }
     }
-  }, []);
-  // localStorage.removeItem('searchData')
+  });
+  useEffect(()=>{
+    localStorage.removeItem('searchData')
+  },[searchData])
+  
   return (
     <div className="App">
       <SearchBar
