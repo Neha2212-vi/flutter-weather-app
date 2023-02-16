@@ -1,0 +1,16 @@
+.city_state{
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: white;
+}
+.weather_status{
+    margin: 10px auto;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+.temp{
+    margin: 10px auto;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}

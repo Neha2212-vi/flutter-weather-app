@@ -1,0 +1,9 @@
+.App {
+  box-sizing: border-box;
+  width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 15px 30px;
+  background-image: linear-gradient(to right, rgb(12, 106, 137), rgb(100, 196, 228));
+}
+
